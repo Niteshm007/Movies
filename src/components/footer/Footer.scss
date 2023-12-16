@@ -1,80 +1,100 @@
 @import "../../mixins.scss";
 .footer {
-    background-color: var(--black3);
-    padding: 50px 0;
-    color: white;
-    position: relative;
-    .contentWrapper {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+  background-color: var(--black3);
+  padding: 50px 0;
+  color: white;
+  position: relative;
+  .contentWrapper {
+    width: 80%;
+  }
+  .about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      45deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    );
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 8s linear infinite;
+  }
+  @keyframes rainbow {
+    0% {
+      background-position: 0% 50%;
     }
-    .menuItems {
-        list-style-type: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        margin-bottom: 20px;
-        @include md {
-            margin-bottom: 30px;
-            gap: 30px;
-        }
-        .menuItem {
-            transition: all ease 0.3s;
-            cursor: pointer;
-            font-size: 12px;
-            @include md {
-                font-size: 16px;
-            }
-            &:hover {
-                color: var(--pink);
-            }
-        }
+  
+    100% {
+      background-position: 100% 50%;
     }
-    .infoText {
-        font-size: 3rem;
-        color: rgb(255, 208, 0);
-        font-weight: bolder;
-        line-height: 20px;
-        opacity: 0.5;
-        text-align: center;
-        max-width: 800px;
-        margin-bottom: 30px;
-        @include md {
-            font-size: 3rem;
-            margin-bottom: 30px;
-        }
+  }
+  .me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+      color: red;
     }
+    span {
+      color: yellow;
+      font-size: 1.3rem;
+      a{
+        color: inherit;
+        text-decoration: none;
+      }
 
-    .infoImg img{
-        width: 250px;
-        height: 250px;
-        margin: 15px;
-        border-radius: 50px;
+      a:hover{
+        color: aqua;
+        border-bottom: 3px solid green;
+      }
     }
-    .socialIcons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        a{
-            color: inherit;
-        }
-        .icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--black);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all ease 0.3s;
-            &:hover {
-                box-shadow: 0 0 0.625em var(--pink);
-                color: var(--pink);
-            }
-        }
+    ul {
+      font-size: 2rem;
     }
+    li {
+      list-style: none;
+      margin-left: 2rem;
+    }
+  }
+
+  .infoImg img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justifyalign-content: center;
+    margin: 10px  auto;
+  }
+  .socialIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    a {
+      color: inherit;
+    }
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all ease 0.3s;
+      &:hover {
+        box-shadow: 0 0 0.625em var(--pink) !important;
+        color: var(--pink) !important;
+      }
+    }
+  }
 }
