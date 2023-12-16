@@ -9,6 +9,7 @@ import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 import MovieCard from "../../components/movieCard/MovieCard";
 import Spinner from "../../components/spinner/Spinner";
 import noResults from "../../assets/no-results.png";
+import NoResult from "./noResult/NoResult";
 
 const SearchResult = () => {
   const [data, setData] = useState(null);
@@ -74,7 +75,7 @@ const SearchResult = () => {
               </InfiniteScroll>
             </>
           ) : (
-            <span className="resultNotFound">Sorry, Results Not Found !!!</span>
+            <NoResult/>
           )}
         </ContentWrapper>
       )}
