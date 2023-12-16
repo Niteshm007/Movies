@@ -15,6 +15,9 @@ const Footer = () => {
                 Name: <span> Nitesh Malviya</span>
               </h3>
               <h3>
+                Progammer: <span> Web Developer</span>
+              </h3>
+              <h3>
                 Contact: <span> 📞 +91 7374866730</span>
               </h3>
               <h3>
